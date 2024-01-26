@@ -1,0 +1,13 @@
+prix_ht = float(input("Saisissez le prix hors taxe du produit : "))
+taux_TVA = float(input("Saisissez le taux de TVA en pourcentage : "))
+TVA = (prix_ht * taux_TVA) / 100
+
+prix_TTC = prix_ht + TVA
+print("Le prix TTC du produit est de :", prix_TTC, "euros.")
+
+if prix_TTC > 20000:
+    prix_TTC = prix_TTC * 0.9
+    print("Une réduction de 10 pour cent a été appliquée !")
+    print("Le nouveau prix TTC est de :", prix_TTC, "euros.")
+else:
+    print("Pas de réduction applicable.")

@@ -1,0 +1,38 @@
+mot_de_passe = str(input("Veuillez entrer votre mot de passe pour accéder à votre compte : "))
+
+if mot_de_passe == "JediMaster":
+    prix_ht = float(input("Veuillez saisir le prix hors taxe de l'article : "))
+    est_electrique = str(input("L'article est-il électrique ? Répondez par Oui ou Non : "))
+
+    if est_electrique == "Oui":
+        taux_TVA = 5
+        print("Cet article est électrique, le taux de TVA est de 5 pour cent.")
+    else:
+        taux_TVA = 20
+
+    TVA = (prix_ht * taux_TVA) / 100
+    prix_TTC = prix_ht + TVA
+    print("Le prix TTC de l'article est de :", prix_TTC, "euros.")
+
+    if prix_TTC > 20000:
+        prix_TTC = prix_TTC * 0.9
+        print("Une réduction de 10 pour cent a été appliquée !")
+        print("Le nouveau prix TTC est de :", prix_TTC, "euros.")
+    else:
+        print("Pas de réduction applicable.")
+
+else:
+    print("Mot de passe incorrect. Bonne journée !")
+
+carte=str(input("Entrez 1-Sans Carte /2-Gold /3-platinium"))
+
+if carte == 1:
+    print("pas de réduction")
+
+if carte == 2:
+    prix_TTC = prix_TTC*0,80$
+    if est_electrique == "Oui" : 
+        prix_TTC = prix_TTC*0,70
+
+if carte == 3:
+    prix_TTC = prix_TTC*0,85

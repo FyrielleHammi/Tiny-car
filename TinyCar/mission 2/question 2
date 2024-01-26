@@ -1,0 +1,20 @@
+prix_ht = float(input("Entrez le prix hors taxe du véhicule : "))
+est_electrique = str(input("Votre voiture est-elle électrique ? Répondez par Oui ou par Non : "))
+
+if est_electrique == "Oui":
+    taux_TVA = 5
+    print("Le véhicule est électrique, le taux de TVA est donc de 5 pour cent.")
+else:
+    taux_TVA = 20
+    print("Le véhicule n'est pas électrique, le taux de TVA est de 20 pour cent.")
+
+TVA = (prix_ht * taux_TVA) / 100
+prix_TTC = prix_ht + TVA
+print("Le prix TTC du véhicule est de :", prix_TTC, "euros.")
+
+if prix_TTC > 20000:
+    prix_TTC = prix_TTC * 0.9
+    print("Une réduction de 10 pour cent a été appliquée !")
+    print("Le nouveau prix TTC est de :", prix_TTC, "euros.")
+else:
+    print("Pas de réduction applicable.")

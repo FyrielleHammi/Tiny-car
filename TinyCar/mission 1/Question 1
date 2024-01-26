@@ -1,0 +1,9 @@
+prix_ht = float(input("Entrez le prix hors taxe de la voiture : ")) #Demande à l'utilisateur grâce a input le prix hors taxe de la voiture
+
+taux_TVA = float(input("Entrez le taux de TVA en pourcentage : ")) #Demande à l'utilisateur grâce a input le taux de TVA
+
+TVA = (prix_ht * taux_TVA )/ 100 # j'ai ajouté la division par 100 pour la TVA car je l'ai mise en pourcentage .
+
+prix_Totalttc = prix_ht + TVA
+
+print("Le prix total TTC de la voiture est" , prix_Totalttc)
