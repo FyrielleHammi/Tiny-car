@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Tinycartwo {
+
+     public static void main(String[]args){
+
+          Scanner scanner = new Scanner(System.in);
+
+          String modele = "Tiny Car";
+          double prixHT = 23999;
+          double tva = 0.2;
+          double prixttc = prixHT * (1 + tva);
+          double remise = 0.10;
+          double prixApresRemise = prixttc / (1+remise);
+
+          System.out.println("Le prix total TTC de " + modele +" est de : " + prixttc + " avec remise est de " + prixApresRemise + " euros.");
+
+          System.out.print("Veuillez indiquer si le produit saisi est électrique (TVA à 5%) ou pas (TVA à 20%).Répondez par 'oui' ou 'non':");
+
+          String codeSecret = "Padawan";
+
+
+          System.out.println("Veuillez saisir le code secret pour accéder à l'application :");
+          String choix = scanner.nextLine();
+
+          if (choix.equalsIgnoreCase("Padawan")){
+
+               System.out.println("Code secret incorrect. Vous n'êtes pas autorisé à utiliser cette application.");
+               System.out.println("Au revoir !");
+               System.out.println("Code secret correct. Vous pouvez utiliser l'application.");
+
+          }else {
+                    System.out.print("Mot de passe incorrect");
+
+
+               }
+          System.out.println("Veuillez choisir une option :1- Sans carte/2- Avec carte gold/3- Avec carte platinium");
+          int carteFidelite = scanner.nextInt();
+          double pourcentageReduction = 0;
+
+          System.out.println(carteFidelite);
+
+
+          }
+
+}
