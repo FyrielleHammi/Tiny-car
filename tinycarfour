@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Tinycarfour {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> article= new ArrayList<>();
+
+        article.add("voiture");
+        article.add("trotinette");
+        article.add("roller");
+        article.add("velo");
+        article.add("tableau");
+
+        ArrayList<Integer> prixht_art = new ArrayList<>();
+
+        for (int i = 0;i <article.size() ; i++) {
+            System.out.print("quel est le prix de "+article.get(i)+" : ");
+            int prixuser= scanner.nextInt();
+            prixht_art.add(prixuser);
+        }
+
+
+        System.out.println("La liste des accessoires sont:");
+        for (int i = 0; i <article.size() ; i++) {
+            System.out.print(article.get(i)+" pour cet article le prix est : "+prixht_art.get(i)+"euros \n");
+        }
+        scanner.close();
+
+        System.out.println("Entrez la taille du panier :");
+    }
+
+}
