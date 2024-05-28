@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Tinycarfive {
+    ArrayList<String> article = new ArrayList<>();
+    ArrayList<Integer> prixht_art = new ArrayList<>();
+
+    public void prixminimum() {
+        int prixminimum = prixht_art.get(0);
+        for (int i = 1; i < prixht_art.size(); i++) {
+            if (prixht_art.get(i) < prixminimum) {
+                prixminimum = prixht_art.get(i);
+            }
+        }
+        System.out.println("Le prix minimum est : " + prixminimum);
+    }
+
+    public void prixmaximum() {
+        int prixmaximum = prixht_art.get(0);
+        for (int i = 1; i < prixht_art.size(); i++) {
+            if (prixht_art.get(i) > prixmaximum) {
+                prixmaximum = prixht_art.get(i);
+            }
+
+        }
+        System.out.println("Le prix maximum est : " + prixmaximum);
+    }
+
+
+    public void prixmoyen() {
+        int prixmoyen = (prixht_art.get(0) + prixht_art.get(1) + prixht_art.get(2) + prixht_art.get(3) + prixht_art.get(4)) / 5;
+        System.out.print("Le prix moyen est : " + prixmoyen);
+    }
+
+    public static void main(String[] args) {
+        Tinycarfive object = new Tinycarfive();
+        Scanner scanner = new Scanner(System.in);
+
+        object.article.add("voiture");
+        object.article.add("trotinette");
+        object.article.add("roller");
+        object.article.add("velo");
+        object.article.add("tableau");
+
+        object.prixht_art.add(14);
+        object.prixht_art.add(20);
+        object.prixht_art.add(5);
+        object.prixht_art.add(30);
+        object.prixht_art.add(4);
